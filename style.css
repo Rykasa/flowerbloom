@@ -11,6 +11,7 @@
   --brand-light: hsl(148, 23%, 89%);
   --brand-light-2: hsl(180, 14%, 97%);
   --brand-beige: hsl(39, 100%, 97%);
+  --about: hsl(170, 100%, 98%);
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
   --white: #FFF;
@@ -142,6 +143,7 @@ body{
   width: 100%;
   padding-block: 10rem;
   text-align: center;
+  background-color: var(--brand-light-2);
 }
 
 .section-2-subheading{
@@ -203,6 +205,19 @@ body{
 .section-3{
   width: 100%;
   padding-block: 10rem;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.section-3::before{
+  content: '';
+  position: absolute;
+  height: calc(100% - 28.95rem);
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--white);
+  z-index: -1;
 }
 
 .section-3 .wrapper {
@@ -217,7 +232,7 @@ body{
   text-transform: uppercase;
   margin-bottom: 1.6rem;
   text-align: center;
-  padding: 2.4rem;
+  padding-inline: 2.4rem;
 }
 
 .section-3-heading{
@@ -226,7 +241,7 @@ body{
   color: var(--headline);
   margin-bottom: 6rem;
   text-align: center;
-  padding: 2.4rem;
+  padding-inline: 2.4rem;
 }
 
 .testimonials{
@@ -304,7 +319,89 @@ body{
   background-color: var(--brand);
 }
 /* End of Swiper */
+.brands-heading{
+  text-align: center;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+  color: var(--headline);
+  margin-bottom: 4rem;
+}
+
+.brands{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 16rem;
+  width: fit-content;
+  position: relative;
+  margin-left: 100%;
+  animation: marquee 8s linear infinite; 
+}
+
+.brands svg{
+  width: 12.3rem;
+  height: 3.2rem;
+}
+
+.brands svg path{
+  fill: var(--brand);
+}
+
+.brands svg:nth-child(4) path:nth-child(4){
+  fill: white;
+}
+
+@keyframes marquee {
+  0% {
+    margin-left: 100%;
+  }
+
+  100% {
+    margin-left: -150%;
+  }
+}
+
+.banner{
+  margin-inline: 2.4rem;
+  padding: 5rem;
+  background-color: var(--brand);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-heading{
+  font-size: 3.2rem;
+  line-height: 4.1rem;
+  margin-bottom: 4rem;
+  color: var(--white);
+}
+
+.banner .contact-btn{
+  background-color: var(--white);
+  border-radius: 4rem;
+  padding: 1.6rem 3.2rem;
+  color: var(--brand);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.8rem;
+}
+
+.banner .contact-btn svg{
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.banner .contact-btn svg path{
+  fill: var(--brand);
+}
 /* End of Section 3 */
 
 /* Section 4 */
+.section-4{
+  padding-block: 16rem;
+  
+}
 /* End of Section 4 */
