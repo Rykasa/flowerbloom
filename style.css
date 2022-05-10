@@ -124,7 +124,7 @@ body{
 
 .stat-number{
   font-weight: 700;
-  font-size: 4.8rem; 
+  font-size: 4.8rem;
   line-height: 6.2rem;
   color: var(--headline);
 }
@@ -205,10 +205,8 @@ body{
   padding-block: 10rem;
 }
 
-.wrapper{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.section-3 .wrapper {
+  margin-right: 2rem;
 }
 
 .section-3-subheading{
@@ -218,6 +216,8 @@ body{
   color: var(--brand);
   text-transform: uppercase;
   margin-bottom: 1.6rem;
+  text-align: center;
+  padding: 2.4rem;
 }
 
 .section-3-heading{
@@ -225,12 +225,14 @@ body{
   line-height: 5.2rem;
   color: var(--headline);
   margin-bottom: 6rem;
+  text-align: center;
+  padding: 2.4rem;
 }
 
 .testimonials{
   display: flex;
-  flex-direction: column;
-  gap: 7.2rem
+  gap: 1.5rem;
+  width: auto;
 }
 
 .testimonial{
@@ -238,7 +240,6 @@ body{
   padding: 3.2rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   border-radius: .4rem;
 }
 
@@ -247,12 +248,14 @@ body{
   font-weight: 400;
   line-height: 2.4rem;
   color: var(--paragraph);
+  margin-top: 2rem;
 }
 
 .customer{
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  margin-top: 2rem;
 }
 
 .customer-name{
@@ -261,8 +264,47 @@ body{
   color: var(--brand);
 }
 
+.testimonial svg{
+  width: 4.5rem;
+  height: 3.1rem;
+}
+
 .testimonial svg path{
   fill: var(--brand);
 }
+
+/* Swiper */
+.swiper-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.4rem;
+  margin-right: 4rem;
+  margin-bottom: 10rem;
+}
+
+.swiper-wrapper{
+  width: 100% !important;
+}
+
+.swiper-slide{
+  height: auto;
+  padding: 3.2rem;
+}
+
+.swiper-pagination-bullet{
+  position: relative;
+  bottom: -2rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: var(--brand);
+}
+/* End of Swiper */
 /* End of Section 3 */
 
+/* Section 4 */
+/* End of Section 4 */

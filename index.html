@@ -126,12 +126,11 @@
     </section>
 
     <section class="section-3">
-      <div class="wrapper">
-        <h4 class="section-3-subheading">Depoimentos</h4>
-        <h2 class="section-3-heading">O que os clientes dizem sobre a FlowerBloom</h2>
-
-        <div class="testimonials">
-            <div class="testimonial">
+      <h4 class="section-3-subheading">Depoimentos</h4>
+      <h2 class="section-3-heading">O que os clientes dizem sobre a FlowerBloom</h2>
+      <div class="wrapper swiper-container">
+        <div class="testimonials swiper-wrapper">
+            <div class="testimonial swiper-slide">
               <blockquote>
                 <svg width="45" height="31" viewBox="0 0 45 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -149,7 +148,7 @@
                 </cite>
               </blockquote>                
             </div>       
-            <div class="testimonial">
+            <div class="testimonial swiper-slide">
               <blockquote>
                 <svg width="45" height="31" viewBox="0 0 45 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -167,7 +166,7 @@
                 </cite>
               </blockquote>                
             </div>       
-            <div class="testimonial">
+            <div class="testimonial swiper-slide">
               <blockquote>
                 <svg width="45" height="31" viewBox="0 0 45 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -186,10 +185,14 @@
               </blockquote>                
             </div>       
         </div>
+        <div class="swiper-pagination"></div>
       </div>
+
+      <h2>Empresas que confiam</h2>
     </section>
   </div>
 
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="./main.js"></script>
 </body>
 </html>
