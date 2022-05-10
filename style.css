@@ -499,7 +499,42 @@ body{
 
 /* Section 6 */
 .section-6{
+  width: 100%;
   padding-block: 6rem;
   background-color: var(--brand);
+}
+
+.logo{
+  font-size: 4rem;
+  color: var(--white);
+  letter-spacing: .1rem;
+  margin-bottom: 2.4rem;
+}
+
+.logo span{
+  font-weight: 700;
+}
+
+.copyright{
+  width: 21.6rem;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  font-weight: 400;
+  color: var(--brand-light);
+  margin-bottom: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.social-links{
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.social-link{
+  width: 2.4rem;
+  height: 2.4rem;
 }
 /* End of Section 6 */
