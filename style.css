@@ -108,11 +108,12 @@ body{
 
 .stats{
   padding: 4rem 7.2rem;
-  background-color: var(--brand-beige);
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
   gap: 6rem;
   border-radius: .6rem;
+  border: .1rem solid var(--brand-light);
 }
 
 .stat{
@@ -178,6 +179,7 @@ body{
 
   background-color: var(--white);
   border-radius: .6rem;
+  border: .1rem solid var(--brand-light);
 }
 
 .card svg{
