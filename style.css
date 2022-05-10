@@ -79,7 +79,7 @@ body{
 
 .contact-btn{
   display: block;
-  font-size: 1.4;
+  font-size: 1.4rem;
   text-transform: uppercase;
   line-height: 1.8rem;
   font-weight: 700;
@@ -395,6 +395,7 @@ body{
   width: 2.4rem;
   height: 2.4rem;
 }
+
 .banner .contact-btn svg path{
   fill: var(--brand);
 }
@@ -458,5 +459,47 @@ body{
 .section-5{
   padding-block: 10rem;
   background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-5-heading{
+  font-size: 3rem;
+  line-height: 3.9rem;
+  color: var(--headline);
+  margin-bottom: 3.2rem;
+}
+
+.address{
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin-bottom: 1.6rem;
+}
+
+.email{
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin-bottom: 3.2rem;
+}
+
+.section-5 .contact-btn{
+  margin-inline: 0;
+}
+
+.contact-img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1rem;
 }
 /* End of Section 5 */
+
+/* Section 6 */
+.section-6{
+  padding-block: 6rem;
+  background-color: var(--brand);
+}
+/* End of Section 6 */
