@@ -753,6 +753,11 @@ body.menu-expanded .menu{
     display: grid;
   }
 
+  .section-heading {
+    font-size: 4rem;
+    line-height: 5.2rem;
+  }
+
   .col-a{
     grid-area: A;
   }
@@ -843,6 +848,7 @@ body.menu-expanded .menu{
     filter: brightness(1.3);
   }
 
+  /* Section 1 */
   .section-1::before{
     height: calc(100% - 10.5rem);
   }
@@ -884,6 +890,19 @@ body.menu-expanded .menu{
 
   .stat{
     flex: 1;
+  }
+
+  /* Section 2 */
+  .cards{
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+
+  .card{
+    width: 32rem;
+    padding: 2.4rem;
+    gap: 1.6rem;
   }
 }
 /* End of Responsive */
