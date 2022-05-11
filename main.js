@@ -2,7 +2,7 @@
 const openMenuBtn = document.querySelector('.open-menu');
 
 openMenuBtn.addEventListener('click', ()=>{
-  document.body.classList.add('menu-expanded')
+  document.body.classList.toggle('menu-expanded')
 })
 
 

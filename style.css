@@ -75,7 +75,7 @@ body{
   position: fixed;
   top: 1.6rem;
   right: 2.4rem;
-  z-index: 10;
+  z-index: 15;
 }
 
 .links{
@@ -125,8 +125,7 @@ body.menu-expanded> :not(nav){
 }
 
 .menu,
-.close-menu,
-body.menu-expanded .open-menu{
+.close-menu{
   opacity: 0;
   visibility: hidden;
 } 
