@@ -32,7 +32,50 @@ body{
 }
 
 .wrapper{
+  width: min(50rem, 100%);
   padding-inline: 2.4rem;
+}
+
+section{
+  padding-block: 10rem;
+}
+
+.section-subheading{
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  letter-spacing: .1rem;
+  color: var(--brand);
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+
+.section-heading{
+  font-size: 3rem;
+  line-height: 3.9rem;
+  color: var(--headline);
+}
+
+.contact-btn {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  line-height: 1.8rem;
+  font-weight: 700;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  background-color: var(--brand);
+  padding: 1.7rem 3.2rem;
+  border-radius: 4rem;
+  width: max-content;
+  margin-inline: auto;
+  margin-bottom: 6rem;
+}
+
+.contact-btn:hover {
+  background-color: var(--brand-dark);
+  transition: background-color .2s;
 }
 /* End of Common styles */
 
@@ -248,6 +291,7 @@ body.menu-expanded .menu{
   width: 100%;
   height: 100%;
   text-align: center;
+  padding-block: 0;
   padding-top: calc(4rem + var(--navbar-height));
   overflow: hidden;
   position: relative;
@@ -265,16 +309,6 @@ body.menu-expanded .menu{
   z-index: -1;
 }
 
-.section-1-subheading{
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  color: var(--brand);
-  line-height: 2.1rem;
-  letter-spacing: .1rem;
-  padding-top: 4.1rem;
-  margin-bottom: 1.6rem;
-}
-
 .section-1-heading{
   font-size: 3.4rem;
   line-height: 4.4rem;
@@ -287,29 +321,6 @@ body.menu-expanded .menu{
   line-height: 2.7rem;
   color: var(--paragraph);
   margin-bottom: 3.2rem;
-}
-
-.contact-btn{
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  line-height: 1.8rem;
-  font-weight: 700;
-  color: var(--white);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.6rem;
-  background-color: var(--brand);
-  padding: 1.7rem 3.2rem;
-  border-radius: 4rem;
-  width: max-content;
-  margin-inline: auto;
-  margin-bottom: 6rem;
-}
-
-.contact-btn:hover {
-  background-color: var(--brand-dark);
-  transition: background-color .2s;
 }
 
 .section-1-img{
@@ -357,24 +368,11 @@ body.menu-expanded .menu{
 /* Section-2 */
 .section-2{
   width: 100%;
-  padding-block: 10rem;
   text-align: center;
   background-color: var(--brand-light-2);
 }
 
-.section-2-subheading{
-  font-size: 1.4rem;
-  line-height: 2.1rem;
-  color: var(--brand);
-  text-transform: uppercase;
-  margin-bottom: 1.6rem;
-  letter-spacing: .1rem;
-}
-
-.section-2-heading{
-  font-size: 3rem;
-  line-height: 3.9rem;
-  color: var(--headline);
+.section-2 .section-heading{
   margin-bottom: 6rem;
 }
 
@@ -421,9 +419,9 @@ body.menu-expanded .menu{
 /* Section 3 */
 .section-3{
   width: 100%;
-  padding-block: 10rem;
   overflow-x: hidden;
   position: relative;
+  padding-bottom: 0;
 }
 
 .section-3::before{
@@ -441,21 +439,11 @@ body.menu-expanded .menu{
   margin-right: 2rem;
 }
 
-.section-3-subheading{
-  font-size: 1.4rem;
-  line-height: 2.1rem;
-  letter-spacing: .08rem;
-  color: var(--brand);
-  text-transform: uppercase;
-  margin-bottom: 1.6rem;
+.section-3 .section-subheading{
   text-align: center;
-  padding-inline: 2.4rem;
 }
 
-.section-3-heading{
-  font-size: 3rem;
-  line-height: 5.2rem;
-  color: var(--headline);
+.section-3 .section-heading{
   margin-bottom: 6rem;
   text-align: center;
   padding-inline: 2.4rem;
@@ -651,19 +639,7 @@ body.menu-expanded .menu{
   z-index: -1;
 }
 
-.section-4-subheading{
-  font-size: 1.4rem;
-  line-height: 2.1rem;
-  letter-spacing: 0.08rem;
-  text-transform: uppercase;
-  color: var(--brand);
-  margin-bottom: 1.6rem;
-}
-
-.section-4-heading{
-  font-size: 3rem;
-  line-height: 3.9rem;
-  color: var(--headline);
+.section-4 .section-heading{
   margin-bottom: 2.4rem;
 }
 
@@ -685,17 +661,14 @@ body.menu-expanded .menu{
 
 /* Section 5 */
 .section-5{
-  padding-block: 10rem;
+  width: 100%;
   background-color: var(--white);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
-.section-5-heading{
-  font-size: 3rem;
-  line-height: 3.9rem;
-  color: var(--headline);
+.section-5 .section-heading{
   margin-bottom: 3.2rem;
 }
 
