@@ -3,6 +3,8 @@ const openMenuBtn = document.querySelector('.open-menu');
 const navbar = document.querySelector('.navbar')
 const menuLinks = document.querySelectorAll('.menu-link')
 const menuBtn = document.querySelector('.menu .contact-btn')
+const backToTopBtn = document.querySelector('.backToTop-btn')
+
 
 menuLinks.forEach(link =>{
   link.addEventListener('click', () =>{
@@ -24,7 +26,12 @@ window.addEventListener('scroll', () =>{
     navbar.classList.add('scroll')
   }else{
     navbar.classList.remove('scroll')
+  }
 
+  if(scrollY > 550){
+    backToTopBtn.classList.add('change')
+  }else{
+    backToTopBtn.classList.remove('change')
   }
 })
 

@@ -36,6 +36,23 @@ body{
 }
 /* End of Common styles */
 
+/* Back to top button */
+.backToTop-btn{
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem; 
+  z-index: 20;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.backToTop-btn.change {
+  opacity: 1;
+  visibility: visible;
+}
+/* End of Back to top button */
+
 /* Navbar */
 .navbar{
   width: 100%;
