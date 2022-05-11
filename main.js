@@ -1,3 +1,12 @@
+//Open navbar
+const openMenuBtn = document.querySelector('.open-menu');
+
+openMenuBtn.addEventListener('click', ()=>{
+  document.body.classList.add('menu-expanded')
+})
+
+
+//Swiper
 const swiper = new Swiper('.swiper-container', {
 
   slidesPerView: 1,
