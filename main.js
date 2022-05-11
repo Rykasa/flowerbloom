@@ -3,7 +3,7 @@ const openMenuBtn = document.querySelector('.open-menu');
 const navbar = document.querySelector('.navbar')
 const menuLinks = document.querySelectorAll('.menu-link')
 const menuBtn = document.querySelector('.menu .contact-btn')
-const backToTopBtn = document.querySelector('.backToTop-btn')
+const backToTopBtn = document.querySelector('.back-to-top-btn')
 
 
 menuLinks.forEach(link =>{

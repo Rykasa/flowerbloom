@@ -37,7 +37,7 @@ body{
 /* End of Common styles */
 
 /* Back to top button */
-.backToTop-btn{
+.back-to-top-btn{
   position: fixed;
   bottom: 1rem;
   right: 1rem; 
@@ -45,11 +45,17 @@ body{
 
   opacity: 0;
   visibility: hidden;
+
+  transform: translateY(100%);
+  transition: .2s;
 }
 
-.backToTop-btn.change {
+.back-to-top-btn.change {
   opacity: 1;
   visibility: visible;
+
+  transform: translateY(0);
+  opacity: 1;
 }
 /* End of Back to top button */
 
