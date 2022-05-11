@@ -107,22 +107,27 @@ section{
   width: 100%;
   height: var(--navbar-height);
 
-  padding-inline: 2.4rem;
   padding-block: 1.6rem;
-
+  /* padding-inline: 2.4rem;*/
+  
   position: fixed;
   top: 0;
   z-index: 100;
+  display: flex;
 }
+
+.navbar .wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} 
 
 .navbar .logo{
   font-size: 2rem;
   color: var(--headline);
   margin: 0;
-  position: fixed;
-  top: 2.5rem; 
-  left: 2.4rem;
-  z-index: 10;
+  position: relative;
+  z-index: 15;
 }
 
 .navbar .logo span {
@@ -148,9 +153,6 @@ body.menu-expanded .navbar .logo span{
   align-items: center;
   gap: .6rem;
   cursor: pointer;
-  position: fixed;
-  top: 2.5rem;
-  right: 2.4rem;
   z-index: 15;
 }
 
@@ -741,4 +743,10 @@ body.menu-expanded .menu{
 /* End of Section 6 */
 
 /* Responsive */
+@media (min-width: 1024px){
+  .wrapper{
+    width: min(112rem, 100%);
+    margin-inline: auto;
+  }
+}
 /* End of Responsive */
