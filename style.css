@@ -34,6 +34,7 @@ body{
 .wrapper{
   width: min(50rem, 100%);
   padding-inline: 2.4rem;
+  margin-inline: auto;
 }
 
 section{
@@ -101,6 +102,13 @@ section{
   opacity: 1;
 }
 /* End of Back to top button */
+
+/* Navbar 2... */
+.menu2{
+  display: none;
+}
+
+/* End of Navbar 2... */
 
 /* Navbar */
 .navbar{
@@ -291,7 +299,6 @@ body.menu-expanded .menu{
 /* Section 1 */
 .section-1{
   width: 100%;
-  height: 100%;
   text-align: center;
   padding-block: 0;
   padding-top: calc(4rem + var(--navbar-height));
@@ -437,10 +444,6 @@ body.menu-expanded .menu{
   z-index: -1;
 }
 
-.section-3 .wrapper {
-  margin-right: 2rem;
-}
-
 .section-3 .section-subheading{
   text-align: center;
 }
@@ -571,7 +574,7 @@ body.menu-expanded .menu{
 }
 
 .banner{
-  margin-inline: 2.4rem;
+  /* margin-inline: 2.4rem; */
   padding: 5rem;
   background-color: var(--brand);
   border-radius: 1rem;
@@ -747,6 +750,89 @@ body.menu-expanded .menu{
   .wrapper{
     width: min(112rem, 100%);
     margin-inline: auto;
+    display: grid;
+  }
+
+  .open-menu{
+    display: none;
+  }
+
+  .navbar .wrapper .logo {
+    display: none;
+  }
+
+  .navbar .logo2 {
+    font-size: 2rem;
+    color: var(--headline);
+  }
+
+  .navbar .logo2 span {
+    color: var(--brand);
+    font-weight: 700;
+  }
+
+  .navbar.scroll .logo2,
+  .navbar.scroll .logo2 span {
+    color: var(--white);
+  }
+
+  .menu2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .links2{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3.2rem;
+  }
+
+  .links2 .menu-link{
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.1rem;
+    color: var(--brand);
+    opacity: .7;
+  }
+
+  .navbar.scroll .links2 .menu-link{
+    color: var(--white);
+  }
+
+  .links2 .menu-link:hover{
+    opacity: 1;
+    font-weight: 700;
+  }
+
+  .contact-btn2 {
+    padding: 1.2rem 2.4rem;
+    border-radius: 4rem;
+    border: .1rem solid var(--brand);
+    font-size: 1.6rem;
+    color: var(--brand);
+    line-height: 2.1rem;
+    font-weight: 700;
+  }
+
+  .contact-btn2:hover{
+    background-color: var(--brand);
+    color: var(--white);
+    transition: .2s;
+  }
+
+  .navbar.scroll .contact-btn2{
+    color: var(--white);
+    border-color: var(--white);
+  }
+
+  .navbar.scroll .contact-btn2:hover{
+    background-color: var(--brand);
+    border-color: var(--brand);
+    filter: brightness(1.3);
   }
 }
 /* End of Responsive */
