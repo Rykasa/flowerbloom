@@ -10,6 +10,8 @@
   --brand: hsl(170, 100%, 26%);
   --brand-light: hsl(148, 23%, 89%);
   --brand-light-2: hsl(180, 14%, 97%);
+  --brand-dark: hsl(170, 100%, 14%);
+
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
   --white: #FFF;
@@ -20,6 +22,8 @@
 html{
   font-size: 62.5%;
   font-family: 'DM Sans', sans-serif;
+
+  scroll-behavior: smooth;
 }
 
 body{
@@ -40,11 +44,6 @@ body{
   padding-inline: 2.4rem;
   padding-block: 1.6rem;
 
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-evenly;
-
   position: fixed;
   top: 0;
   z-index: 100;
@@ -55,13 +54,24 @@ body{
   color: var(--headline);
   margin: 0;
   position: fixed;
-  top: 1.6rem; 
+  top: 2.5rem; 
   left: 2.4rem;
   z-index: 10;
 }
 
 .navbar .logo span {
+  color: var(--brand);
+}
+
+.navbar.scroll .logo,
+.navbar.scroll .logo span,
+body.menu-expanded .navbar .logo,
+body.menu-expanded .navbar .logo span{
   color: var(--white);
+}
+
+.navbar.scroll{
+  background-color: var(--brand);
 }
 
 .open-menu{
@@ -73,9 +83,53 @@ body{
   gap: .6rem;
   cursor: pointer;
   position: fixed;
-  top: 1.6rem;
+  top: 2.5rem;
   right: 2.4rem;
   z-index: 15;
+}
+
+.line {
+  width: 100%;
+  height: .3rem;
+  background-color: var(--brand);
+}
+
+.line-1 {
+  width: 50%;
+  margin-right: auto;
+}
+
+.line-3 {
+  width: 50%;
+  margin-left: auto;
+}
+
+body.menu-expanded .open-menu{
+  right: 4rem;
+}
+
+.navbar.scroll .line,
+body.menu-expanded .line{
+  background-color: var(--white);
+}
+
+body.menu-expanded .line-1{
+  width: 100%;
+  position: relative;
+  top: 1rem;
+  transform: rotate(45deg);
+  transition: transform .2s;
+}
+
+body.menu-expanded .line-2{
+  transform: rotate(-45deg);
+  position: relative;
+  top: .1rem;
+  transition: transform .2s;
+}
+
+body.menu-expanded .line-3 {
+  visibility: hidden;
 }
 
 .links{
@@ -94,6 +148,7 @@ body{
   font-weight: 700;
   line-height: 3.1rem;
   color: var(--brand-light);
+  cursor: pointer;
 }
 
 .navbar .contact-btn{
@@ -102,7 +157,18 @@ body{
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 2.3rem;
+
+  padding: 1.6rem 3.2rem;
+  margin-bottom: 8rem;
 }
+
+.navbar .contact-btn:hover {
+  background-color: var(--brand);
+  color: var(--white);
+
+  filter: brightness(1.3);
+}
+
 .navbar .contact-btn svg path{
   fill: var(--brand);
 }
@@ -152,23 +218,6 @@ body.menu-expanded .menu{
   transform: translateY(0);
   transition: transform .3s;
 }
-
-.line{
-  width: 100%;
-  height: .3rem;
-  background-color: var(--white);
-}
-
-.line-1{
-  width: 50%;
-  margin-right: auto;
-}
-
-.line-3{
-  width: 50%;
-  margin-left: auto;
-}
-
 /* End of Navbar */
 
 /* Section 1 */
@@ -218,7 +267,6 @@ body.menu-expanded .menu{
 }
 
 .contact-btn{
-  display: block;
   font-size: 1.4rem;
   text-transform: uppercase;
   line-height: 1.8rem;
@@ -234,6 +282,11 @@ body.menu-expanded .menu{
   width: max-content;
   margin-inline: auto;
   margin-bottom: 6rem;
+}
+
+.contact-btn:hover {
+  background-color: var(--brand-dark);
+  transition: background-color .2s;
 }
 
 .section-1-img{
@@ -460,6 +513,7 @@ body.menu-expanded .menu{
   background-color: var(--brand);
 }
 /* End of Swiper */
+
 .brands-heading{
   text-align: center;
   font-size: 2.4rem;
@@ -531,9 +585,20 @@ body.menu-expanded .menu{
   line-height: 1.8rem;
 }
 
+.banner .contact-btn:hover{
+  background-color: var(--brand);
+  color: var(--white);
+
+  filter: brightness(1.3);
+}
+
 .banner .contact-btn svg{
   width: 2.4rem;
   height: 2.4rem;
+}
+
+.banner .contact-btn:hover svg path {
+  fill: var(--white);
 }
 
 .banner .contact-btn svg path{
