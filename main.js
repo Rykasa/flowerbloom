@@ -1,5 +1,5 @@
 //Open navbar
-const openMenuBtn = document.querySelector('.open-menu');
+const openMenuBtn = document.querySelector('.open-menu')
 const navbar = document.querySelector('.navbar')
 const menuLinks = document.querySelectorAll('.menu-link')
 const menuContactBtn = document.querySelector('.menu .contact-btn')
@@ -21,12 +21,38 @@ const showBackToTopButton = () =>{
   }
 }
 
+document.querySelector('.logo2').addEventListener('click', ()=>{
+  document.querySelector('.section-1').scrollIntoView()
+})
+
 function onScroll(){
   showNavbar()
   showBackToTopButton()
+  activeMenuLinkAtCurrentSection()
 }
 
 onScroll()
+
+function activeMenuLinkAtCurrentSection(){
+  const targetLine = scrollY + innerHeight / 2
+  const sections = document.querySelectorAll('section')
+
+  sections.forEach(section =>{
+    const sectionLink = document.querySelector(`.menu2 a[href*=${section.id}]`)
+    const sectionStart = section.offsetTop
+    const sectionEnd = section.offsetTop + section.offsetHeight
+
+    sectionLink.classList.remove('active')
+
+    if(targetLine >= sectionStart && !(targetLine >= sectionEnd)){
+      sectionLink.classList.add('active')
+    }
+
+    if(sectionLink.classList.contains('logo2')){
+      sectionLink.classList.remove('active')
+    }
+  })
+}
 
 menuLinks.forEach(link =>{
   link.addEventListener('click', () =>{

@@ -777,6 +777,7 @@ body.menu-expanded .menu{
   .navbar .logo2 {
     font-size: 2rem;
     color: var(--headline);
+    cursor: pointer;
   }
 
   .navbar .logo2 span {
@@ -810,15 +811,39 @@ body.menu-expanded .menu{
     line-height: 2.1rem;
     color: var(--brand);
     opacity: .7;
+    position: relative;
+    transition: opacity .4s;
   }
 
   .navbar.scroll .links2 .menu-link{
     color: var(--white);
   }
 
+  .links2 .menu-link.active,
   .links2 .menu-link:hover{
     opacity: 1;
     font-weight: 700;
+  }
+
+  .links2 .menu-link::after {
+    content: '';
+    width: 0;
+    height: .2rem;
+    position: absolute;
+    bottom: -2.4rem;
+    left: -.3rem;
+    background-color: var(--brand);
+
+    transition: width .2s;
+  }
+
+  .navbar.scroll .links2 .menu-link::after{
+    background-color: var(--white);
+  }
+
+  .links2 .menu-link.active::after,
+  .links2 .menu-link:hover::after{
+    width: 110%;
   }
 
   .contact-btn2 {
@@ -842,6 +867,7 @@ body.menu-expanded .menu{
     border-color: var(--white);
   }
 
+  .navbar.scroll .contact-btn2.active,
   .navbar.scroll .contact-btn2:hover{
     background-color: var(--brand);
     border-color: var(--brand);
