@@ -904,5 +904,60 @@ body.menu-expanded .menu{
     padding: 2.4rem;
     gap: 1.6rem;
   }
+
+  /* Section 3 */
+  .swiper-container{
+    width: 45rem !important;
+    /* padding-inline: auto; */
+    margin: 0;
+    margin-bottom: 16rem;
+  }
+
+  .swiper-slide{
+    width: fit-content !important;
+  }
+
+  .section-3 .wrapper{
+    overflow: hidden;
+  }
+
+  .section-3::before{
+    height: calc(100% - 14.1rem);
+  }
+
+  .swiper-pagination-bullet {
+    position: relative;
+    bottom: -4.9rem;
+    left: 75%;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .brands-heading{
+    margin-bottom: 4.8rem;
+  }
+
+  .brands{
+    animation: none;
+    margin-left: 0;
+    margin-inline: auto;
+    gap: 9.9rem;
+  }
+
+  .banner{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10rem;
+  }
+  
+  .banner-heading{
+    width: 50%;
+    margin: 0;
+  }
+
+  .banner .contact-btn{
+    margin: 0;
+  }
 }
 /* End of Responsive */
