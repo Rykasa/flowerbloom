@@ -959,5 +959,24 @@ body.menu-expanded .menu{
   .banner .contact-btn{
     margin: 0;
   }
+
+  /* Section 4 */
+  .section-4 .wrapper{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'B A';
+    gap: 6.6rem;
+  }
+
+  .section-4-img{
+    height: auto;
+  }
+
+  .section-4 .col-a{
+    align-self: center;
+  }
+
+  .section-4-paragraph{
+    margin-bottom: 0;
+  }
 }
 /* End of Responsive */
