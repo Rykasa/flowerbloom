@@ -1000,5 +1000,28 @@ body.menu-expanded .menu{
   .section-5 .section-heading{
     width: 40.4rem;
   }
+  
+  /* footer */
+  .section-6{
+    padding-block: 8rem;
+  }
+
+  .section-6 .wrapper{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'A B';
+  }
+
+  .section-6 .col-a{
+    align-self: center;
+  }
+
+  .copyright{
+    margin-bottom: 0;
+  }
+
+  .section-6 .col-b{
+    align-self: center;
+    justify-self: flex-end;
+  }
 }
 /* End of Responsive */
