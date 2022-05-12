@@ -978,5 +978,27 @@ body.menu-expanded .menu{
   .section-4-paragraph{
     margin-bottom: 0;
   }
+
+  /* Section 5 */
+  .section-5{
+    padding-block: 16rem;
+  }
+
+  .section-5 .wrapper{
+    grid-template-columns: 1fr 57.5rem;
+    grid-template-areas: 'A B';
+  }
+
+  .section-5 .col-a{
+    align-self: center;
+  }
+
+  .contact-img{
+    height: auto;
+  }
+
+  .section-5 .section-heading{
+    width: 40.4rem;
+  }
 }
 /* End of Responsive */
